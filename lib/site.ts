@@ -31,7 +31,7 @@ export const site = {
     country: "QA",
   },
   geo,
-  mapUrl: `https://www.google.com/maps/dir/?api=1&destination=${geo.latitude}%2C${geo.longitude}`,
+  mapUrl: `https://www.google.com/maps/search/?api=1&query=${geo.latitude}%2C${geo.longitude}`,
 } as const;
 
 export const navLinks = [

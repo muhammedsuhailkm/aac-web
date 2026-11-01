@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { Suspense, useActionState, useEffect, type ReactNode } from "react";
-import { submitEnquiry } from "@/app/contact/actions";
+import { submitEnquiry } from "@/app/(en)/contact/actions";
 import { initialEnquiryState, type EnquiryField, type EnquiryState } from "@/lib/enquiry";
 import { useDohaToday } from "@/lib/use-doha-today";
 import { WhatsappIcon } from "@/components/whatsapp-icon";

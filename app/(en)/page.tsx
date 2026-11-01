@@ -299,7 +299,7 @@ export default function HomePage() {
                   {title}
                 </h3>
                 <p className="mt-3 flex-1 text-[0.9375rem] leading-relaxed text-white/75">{text}</p>
-                <span className="eyebrow mt-5 flex items-center gap-2 text-gold">
+                <span className="eyebrow mt-5 flex items-center gap-2 text-gold-bright">
                   Learn more
                   <span className="sr-only"> about {title}</span>
                   <ArrowRight
@@ -323,7 +323,7 @@ export default function HomePage() {
           {steps.map((step, index) => (
             <li key={step.title} className="relative border-t border-line pt-6">
               <span aria-hidden="true" className="absolute -top-0.5 left-0 h-1 w-14 bg-brand" />
-              <span aria-hidden="true" className="font-display text-[2.5rem] leading-none text-gold">
+              <span aria-hidden="true" className="font-display text-[2.5rem] leading-none text-gold-ink">
                 0{index + 1}
               </span>
               <h3 className="mt-4 text-2xl text-brand">{step.title}</h3>
@@ -380,7 +380,7 @@ export default function HomePage() {
 
       <section className="site-container grid gap-6 py-20 lg:grid-cols-2">
         <div className="rounded bg-brand p-8 text-white md:p-11">
-          <p className="eyebrow text-gold">Need help today?</p>
+          <p className="eyebrow text-gold-bright">Need help today?</p>
           <h2 className="mt-4 text-[2.25rem] leading-tight">Get support right away</h2>
           <p className="mt-4 leading-[1.75] text-white/75">
             Short on time? Message us on WhatsApp or call for immediate help with your setup,

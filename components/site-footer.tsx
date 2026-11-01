@@ -5,7 +5,7 @@ import { navLinks, site } from "@/lib/site";
 
 // Fixed rather than computed: a live date can't be part of the prerendered shell.
 const copyrightYear = 2026;
-const columnTitle = "eyebrow mb-4 text-gold";
+const columnTitle = "eyebrow mb-4 text-gold-bright";
 const footerLink = "transition-colors hover:text-gold";
 
 export function SiteFooter() {

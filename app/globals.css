@@ -5,8 +5,10 @@
   --color-brand-mid: #063b33;
   --color-brand-deep: #052a23;
   --color-gold: #d9a55c;
-  /* Darker gold for small text on white: the design's tone fails WCAG AA there. */
-  --color-gold-ink: #9c6c22;
+  /* Lighter gold for small text on brand green: the design's tone fails WCAG AA there. */
+  --color-gold-bright: #e5b878;
+  /* Darker gold for small text on white and mist: the design's tone fails WCAG AA there. */
+  --color-gold-ink: #8f6218;
   --color-cream: #f5ead9;
   --color-mist: #f1f5f4;
   --color-ink: #16201e;

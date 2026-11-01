@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { navLinks, site } from "@/lib/site";
+import { navLinks } from "@/lib/site";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -16,7 +16,6 @@ export function SiteHeader() {
       <div className="site-container flex h-(--header-height) items-center justify-between gap-6">
         <Link
           href="/"
-          aria-label={`${site.name} home`}
           onNavigate={() => setMenuOpen(false)}
           className="flex shrink-0 items-center gap-2.5"
         >

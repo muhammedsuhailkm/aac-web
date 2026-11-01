@@ -2,14 +2,12 @@ import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArabicServices } from "@/components/arabic-services";
 import { JsonLd } from "@/components/json-ld";
-import { LanguagePanel, LanguageSwitch } from "@/components/language-switch";
+import { LanguageSwitch } from "@/components/language-switch";
 import { PageHero } from "@/components/page-hero";
 import { Stripes } from "@/components/stripes";
-import { breadcrumbSchema, openGraphFor, servicesSchema } from "@/lib/seo";
+import { breadcrumbSchema, openGraphFor, servicesLanguages, servicesSchema } from "@/lib/seo";
 import { setupServices, supportServices, type Service } from "@/lib/services";
-import { site } from "@/lib/site";
 import formationImage from "@/public/images/company-formation-qatar-meeting.webp";
 import supportImage from "@/public/images/corporate-support-team-handshake.webp";
 import heroImage from "@/public/images/qatar-government-services-support.webp";
@@ -18,7 +16,7 @@ export const metadata: Metadata = {
   title: "Company Formation, CR & PRO Services in Qatar",
   description:
     "Company formation, 100% foreign ownership guidance, Commercial Registration, PRO services, Dhareeba NOC, Hukoomi, WPS, audit and translation support in Qatar.",
-  alternates: { canonical: "/services" },
+  alternates: { canonical: "/services", languages: servicesLanguages },
   openGraph: openGraphFor("/services"),
 };
 
@@ -42,20 +40,22 @@ function ServiceCard({ service }: { service: Service }) {
   );
 }
 
-function EnglishServices() {
+export default function ServicesPage() {
   const [formation, ...otherSetupServices] = setupServices;
   const FormationIcon = formation.icon;
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema("Services", "/services")} />
+      <JsonLd data={servicesSchema} />
       <PageHero
         crumb="Services"
-        title="Our services in Qatar"
+        title="Company formation and PRO services in Qatar"
         lead="Business setup, government liaison and day-to-day corporate support for companies of every size in Qatar."
         image={heroImage}
         imagePosition="object-[20%_16%]"
       >
-        <LanguageSwitch />
+        <LanguageSwitch active="en" />
       </PageHero>
 
       <section className="site-container py-20 md:py-24">
@@ -171,31 +171,6 @@ function EnglishServices() {
           </Link>
         </div>
       </section>
-    </>
-  );
-}
-
-export default function ServicesPage() {
-  return (
-    <>
-      <JsonLd data={breadcrumbSchema("Services", "/services")} />
-      <JsonLd data={servicesSchema} />
-      <LanguagePanel language="en">
-        <EnglishServices />
-      </LanguagePanel>
-      <LanguagePanel language="ar">
-        <PageHero
-          crumb="الخدمات"
-          homeLabel="الرئيسية"
-          title="خدمات تأسيس الأعمال والشركات والخدمات المؤسسية في قطر"
-          lead={site.arabicTagline}
-          image={heroImage}
-          imagePosition="object-[20%_16%]"
-        >
-          <LanguageSwitch />
-        </PageHero>
-        <ArabicServices />
-      </LanguagePanel>
     </>
   );
 }

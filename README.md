@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Al Aflah Business Consultancy website
 
-## Getting Started
+Marketing site for [alaflahbusinessconsultancy.com](https://alaflahbusinessconsultancy.com), built with Next.js 16 and Tailwind CSS 4.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where things live
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `lib/site.ts`: company facts (phones, emails, address, WhatsApp number, CR). Change them here and they update everywhere, including structured data.
+- `lib/services.ts`: the 14 services shown on the site, the footer list and the enquiry form options.
+- `lib/seo.ts`: Open Graph defaults and JSON-LD structured data.
+- `app/contact/actions.ts`: enquiry form validation and the WhatsApp message.
+- `public/brand/`: logo SVGs, rebuilt from the vector artwork in the company profile PDF.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Enquiries
 
-## Learn More
+The enquiry form checks the details on the server, then opens WhatsApp with them filled in, addressed to `whatsappNumber` in `lib/site.ts`. The visitor still presses send in WhatsApp, and nothing is stored or emailed by the site.
 
-To learn more about Next.js, take a look at the following resources:
+## Deploying
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Deploy to a Node.js host such as Vercel. The enquiry form and image optimization need a server, so a static export won't work.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+When page content changes, update `lastModified` in `app/sitemap.ts`.

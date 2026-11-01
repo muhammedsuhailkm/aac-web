@@ -18,6 +18,7 @@ import { MeetingPicker } from "@/components/meeting-picker";
 import { Stripes } from "@/components/stripes";
 import { WhatsappIcon } from "@/components/whatsapp-icon";
 import { openGraphFor } from "@/lib/seo";
+import { supportServices } from "@/lib/services";
 import { site, whatsappUrl } from "@/lib/site";
 import aboutImage from "@/public/images/al-aflah-consultants-at-work.webp";
 import heroImage from "@/public/images/business-setup-consultants-qatar.webp";
@@ -62,6 +63,9 @@ const coreServices = [
     icon: BriefcaseBusiness,
   },
 ];
+
+const supportHighlightIds = ["licensed-audit-coordination", "translation-attestation"];
+const supportHighlights = supportServices.filter(({ id }) => supportHighlightIds.includes(id));
 
 const steps = [
   {
@@ -311,6 +315,38 @@ export default function HomePage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className="bg-mist">
+        <div className="site-container py-20 md:py-24">
+          <SectionIntro eyebrow="Beyond setup" title="Audit coordination and document support" />
+          <ul className="mt-10 grid gap-5 md:grid-cols-2">
+            {supportHighlights.map(({ id, name, description, icon: Icon }) => (
+              <li key={id}>
+                <Link
+                  href={`/services#${id}`}
+                  className="group flex h-full flex-col rounded border border-line bg-white p-7"
+                >
+                  <span className="grid size-15 place-items-center rounded-full bg-cream">
+                    <Icon aria-hidden="true" strokeWidth={1.75} className="size-7 text-brand" />
+                  </span>
+                  <h3 className="mt-3 text-2xl text-brand">{name}</h3>
+                  <p className="mt-3 flex-1 text-[0.9375rem] leading-relaxed text-body">
+                    {description}
+                  </p>
+                  <span className="eyebrow mt-5 flex items-center gap-2 text-gold-ink">
+                    Learn more
+                    <span className="sr-only"> about {name}</span>
+                    <ArrowRight
+                      aria-hidden="true"
+                      className="size-4 transition-transform group-hover:translate-x-1"
+                    />
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       <section className="site-container py-20 md:py-24">

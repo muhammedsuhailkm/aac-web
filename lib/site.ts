@@ -1,3 +1,5 @@
+const geo = { latitude: 25.250706, longitude: 51.5518 };
+
 // Company facts from the AAC profile. Everything on the site reads from here.
 export const site = {
   url: "https://alaflahbusinessconsultancy.com",
@@ -28,8 +30,8 @@ export const site = {
     locality: "Doha",
     country: "QA",
   },
-  mapUrl:
-    "https://www.google.com/maps/search/?api=1&query=Building+80%2C+Zone+45%2C+Street+840%2C+Old+Airport+Street%2C+Doha%2C+Qatar",
+  geo,
+  mapUrl: `https://www.google.com/maps/dir/?api=1&destination=${geo.latitude}%2C${geo.longitude}`,
 } as const;
 
 export const navLinks = [

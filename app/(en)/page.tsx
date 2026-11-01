@@ -78,7 +78,7 @@ const steps = [
   },
   {
     title: "Ongoing support",
-    text: "PRO services, WPS, Dhareeba NOC, bank account support and audits, handled for as long as you need us.",
+    text: "PRO services, WPS, Dhareeba NOC, bank account support and audit coordination, handled for as long as you need us.",
   },
 ];
 
@@ -95,7 +95,7 @@ const reasons = [
   },
   {
     title: "End-to-end solutions",
-    text: "From company formation to audits and WPS, one point of contact.",
+    text: "From company formation to audit coordination and WPS, one point of contact.",
     icon: Route,
   },
   {

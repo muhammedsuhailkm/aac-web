@@ -105,17 +105,17 @@ export const supportServices: Service[] = [
     icon: Landmark,
   },
   {
-    id: "audit-services",
-    name: "Audit Services",
+    id: "licensed-audit-coordination",
+    name: "Coordination with Licensed Audit Firms",
     description:
-      "Coordination and support for professional audits, helping you keep proper financial records and meet your obligations.",
+      "We assist with document collection and coordinate with independent, Qatar-licensed audit firms. All audits and audit reports are handled and issued by the appointed licensed audit firm.",
     icon: ChartNoAxesColumn,
   },
   {
-    id: "translation-services",
-    name: "Translation Services",
+    id: "translation-attestation",
+    name: "Translation and Certificate Attestation",
     description:
-      "Professional translation of business, legal, administrative and official documents in Arabic and English.",
+      "Arabic and English translation of business, legal and official documents, with support getting certificates attested by the relevant authorities.",
     icon: Languages,
   },
   {

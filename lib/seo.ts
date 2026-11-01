@@ -78,6 +78,11 @@ export const organizationSchema = {
         addressLocality: site.address.locality,
         addressCountry: site.address.country,
       },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: site.geo.latitude,
+        longitude: site.geo.longitude,
+      },
       hasMap: site.mapUrl,
       areaServed: { "@type": "Country", name: "Qatar" },
       knowsLanguage: ["en", "ar"],

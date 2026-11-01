@@ -15,7 +15,7 @@ import heroImage from "@/public/images/qatar-government-services-support.webp";
 export const metadata: Metadata = {
   title: "Company Formation, CR & PRO Services in Qatar",
   description:
-    "Company formation, 100% foreign ownership guidance, Commercial Registration, PRO services, Dhareeba NOC, Hukoomi, WPS, audit and translation support in Qatar.",
+    "Company formation, 100% foreign ownership guidance, CR, PRO services, Dhareeba NOC, WPS, audit coordination, translation and attestation support in Qatar.",
   alternates: { canonical: "/services", languages: servicesLanguages },
   openGraph: openGraphFor("/services"),
 };

@@ -10,7 +10,7 @@ import heroImage from "@/public/images/qatar-government-services-support.webp";
 export const metadata: Metadata = {
   title: { absolute: "تأسيس الشركات والخدمات الحكومية في قطر | الافلح" },
   description:
-    "تأسيس الشركات والملكية الأجنبية، السجل التجاري والرخصة، العلاقات العامة والمعاملات الحكومية، شهادة عدم الممانعة من «ضريبة»، التدقيق والترجمة وفتح الحسابات البنكية في قطر.",
+    "تأسيس الشركات والملكية الأجنبية، السجل التجاري والرخصة، العلاقات العامة والمعاملات الحكومية، شهادة عدم الممانعة من «ضريبة»، التنسيق مع مكاتب التدقيق، الترجمة وتصديق الشهادات، وفتح الحسابات البنكية في قطر.",
   alternates: { canonical: "/ar/services", languages: servicesLanguages },
   openGraph: openGraphFor("/ar/services", "ar_QA"),
 };

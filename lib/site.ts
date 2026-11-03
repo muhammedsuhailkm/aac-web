@@ -2,7 +2,7 @@ const geo = { latitude: 25.250706, longitude: 51.5518 };
 
 // Company facts from the AAC profile. Everything on the site reads from here.
 export const site = {
-  url: "https://alaflahbusinessconsultancy.com",
+  url: "https://www.alaflahbusinessconsultancy.com",
   domain: "alaflahbusinessconsultancy.com",
   name: "Al Aflah Business Consultancy",
   shortName: "Al Aflah",

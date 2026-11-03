@@ -27,6 +27,10 @@ export const baseMetadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
+  // Search Console property for https://www.alaflahbusinessconsultancy.com/
+  verification: {
+    google: "Un6o0nkrV353mTS3iXMtod3UHdydtYU9wkFIaUc4Q2Y",
+  },
 };
 
 export const siteViewport: Viewport = {

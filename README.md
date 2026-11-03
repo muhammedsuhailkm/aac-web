@@ -28,6 +28,6 @@ The enquiry form checks the details on the server, then opens WhatsApp with them
 
 Deploy to a Node.js host such as Vercel. The enquiry form and image optimization need a server, so a static export won't work.
 
-`site.url` in `lib/site.ts` is the canonical host. Set the host to redirect `www` and `http` to it, or search engines will see duplicate sites.
+`site.url` in `lib/site.ts` is the canonical host (`www`). Set the host to redirect the bare domain and `http` to it, or search engines will see duplicate sites.
 
 When page content changes, update `lastModified` in `app/sitemap.ts`. `/services` and `/ar/services` are a translated pair: if one gets a new URL, update `servicesLanguages` in `lib/seo.ts`.
